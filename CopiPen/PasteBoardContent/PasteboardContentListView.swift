@@ -8,21 +8,42 @@ struct PasteboardContentListView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Content.timestamp, ascending: true)],
         animation: .default)
     private var contents: FetchedResults<Content>
+    @State private var shownFeedback: Bool = true
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(contents) { content in
-                    PasteboardContentView(content: content)
+            ZStack {
+                List {
+                    ForEach(contents) { content in
+                        PasteboardContentView(content: content, didEndPaste: { contentType in
+                            shownFeedback = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                shownFeedback = false
+                            }
+                        })
+                    }
+                    .onDelete(perform: deleteItems)
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .onAppear(perform: {
-                addItem()
-            })
-            .onChange(of: scenePhase) { scenePhase in
-                if scenePhase == .active {
+                .onAppear(perform: {
                     addItem()
+                })
+                .onChange(of: scenePhase) { scenePhase in
+                    if scenePhase == .active {
+                        addItem()
+                    }
+                }
+                
+                if shownFeedback {
+                    VStack {
+                        Spacer()
+                        Text("コピーしました")
+                            .font(.caption)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: 200)
+                            .padding(.vertical, 12)
+                            .background(Color(.systemGray3))
+                            .cornerRadius(16)
+                    }
                 }
             }
         }
@@ -62,5 +83,7 @@ struct PasteboardContentListView: View {
 struct PasteboardContentListView_Previews: PreviewProvider {
     static var previews: some View {
         PasteboardContentListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environment(\.colorScheme, .dark)
+
     }
 }
