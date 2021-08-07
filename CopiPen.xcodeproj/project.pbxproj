@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898C26BE9392009C6990 /* CopiPenApp.swift */; };
+		20BC898F26BE9392009C6990 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898E26BE9392009C6990 /* ContentView.swift */; };
+		20BC899126BE9395009C6990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BC899026BE9395009C6990 /* Assets.xcassets */; };
+		20BC899426BE9395009C6990 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BC899326BE9395009C6990 /* Preview Assets.xcassets */; };
+		20BC899626BE9395009C6990 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC899526BE9395009C6990 /* Persistence.swift */; };
+		20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20BC899726BE9395009C6990 /* CopiPen.xcdatamodeld */; };
+		20BC89A426BE9395009C6990 /* CopiPenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC89A326BE9395009C6990 /* CopiPenTests.swift */; };
+		20BC89AF26BE9395009C6990 /* CopiPenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC89AE26BE9395009C6990 /* CopiPenUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20BC89A026BE9395009C6990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20BC898126BE9392009C6990 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20BC898826BE9392009C6990;
+			remoteInfo = CopiPen;
+		};
+		20BC89AB26BE9395009C6990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20BC898126BE9392009C6990 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20BC898826BE9392009C6990;
+			remoteInfo = CopiPen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20BC898926BE9392009C6990 /* CopiPen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopiPen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20BC898C26BE9392009C6990 /* CopiPenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenApp.swift; sourceTree = "<group>"; };
+		20BC898E26BE9392009C6990 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		20BC899026BE9395009C6990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20BC899326BE9395009C6990 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20BC899526BE9395009C6990 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		20BC899826BE9395009C6990 /* CopiPen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CopiPen.xcdatamodel; sourceTree = "<group>"; };
+		20BC899A26BE9395009C6990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20BC899F26BE9395009C6990 /* CopiPenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopiPenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20BC89A326BE9395009C6990 /* CopiPenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenTests.swift; sourceTree = "<group>"; };
+		20BC89A526BE9395009C6990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20BC89AA26BE9395009C6990 /* CopiPenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopiPenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20BC89AE26BE9395009C6990 /* CopiPenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenUITests.swift; sourceTree = "<group>"; };
+		20BC89B026BE9395009C6990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20BC898626BE9392009C6990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20BC899C26BE9395009C6990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20BC89A726BE9395009C6990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20BC898026BE9392009C6990 = {
+			isa = PBXGroup;
+			children = (
+				20BC898B26BE9392009C6990 /* CopiPen */,
+				20BC89A226BE9395009C6990 /* CopiPenTests */,
+				20BC89AD26BE9395009C6990 /* CopiPenUITests */,
+				20BC898A26BE9392009C6990 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20BC898A26BE9392009C6990 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20BC898926BE9392009C6990 /* CopiPen.app */,
+				20BC899F26BE9395009C6990 /* CopiPenTests.xctest */,
+				20BC89AA26BE9395009C6990 /* CopiPenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20BC898B26BE9392009C6990 /* CopiPen */ = {
+			isa = PBXGroup;
+			children = (
+				20BC898C26BE9392009C6990 /* CopiPenApp.swift */,
+				20BC898E26BE9392009C6990 /* ContentView.swift */,
+				20BC899026BE9395009C6990 /* Assets.xcassets */,
+				20BC899526BE9395009C6990 /* Persistence.swift */,
+				20BC899A26BE9395009C6990 /* Info.plist */,
+				20BC899726BE9395009C6990 /* CopiPen.xcdatamodeld */,
+				20BC899226BE9395009C6990 /* Preview Content */,
+			);
+			path = CopiPen;
+			sourceTree = "<group>";
+		};
+		20BC899226BE9395009C6990 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				20BC899326BE9395009C6990 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		20BC89A226BE9395009C6990 /* CopiPenTests */ = {
+			isa = PBXGroup;
+			children = (
+				20BC89A326BE9395009C6990 /* CopiPenTests.swift */,
+				20BC89A526BE9395009C6990 /* Info.plist */,
+			);
+			path = CopiPenTests;
+			sourceTree = "<group>";
+		};
+		20BC89AD26BE9395009C6990 /* CopiPenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				20BC89AE26BE9395009C6990 /* CopiPenUITests.swift */,
+				20BC89B026BE9395009C6990 /* Info.plist */,
+			);
+			path = CopiPenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20BC898826BE9392009C6990 /* CopiPen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20BC89B326BE9395009C6990 /* Build configuration list for PBXNativeTarget "CopiPen" */;
+			buildPhases = (
+				20BC898526BE9392009C6990 /* Sources */,
+				20BC898626BE9392009C6990 /* Frameworks */,
+				20BC898726BE9392009C6990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CopiPen;
+			productName = CopiPen;
+			productReference = 20BC898926BE9392009C6990 /* CopiPen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20BC899E26BE9395009C6990 /* CopiPenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20BC89B626BE9395009C6990 /* Build configuration list for PBXNativeTarget "CopiPenTests" */;
+			buildPhases = (
+				20BC899B26BE9395009C6990 /* Sources */,
+				20BC899C26BE9395009C6990 /* Frameworks */,
+				20BC899D26BE9395009C6990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20BC89A126BE9395009C6990 /* PBXTargetDependency */,
+			);
+			name = CopiPenTests;
+			productName = CopiPenTests;
+			productReference = 20BC899F26BE9395009C6990 /* CopiPenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		20BC89A926BE9395009C6990 /* CopiPenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20BC89B926BE9395009C6990 /* Build configuration list for PBXNativeTarget "CopiPenUITests" */;
+			buildPhases = (
+				20BC89A626BE9395009C6990 /* Sources */,
+				20BC89A726BE9395009C6990 /* Frameworks */,
+				20BC89A826BE9395009C6990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20BC89AC26BE9395009C6990 /* PBXTargetDependency */,
+			);
+			name = CopiPenUITests;
+			productName = CopiPenUITests;
+			productReference = 20BC89AA26BE9395009C6990 /* CopiPenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20BC898126BE9392009C6990 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					20BC898826BE9392009C6990 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					20BC899E26BE9395009C6990 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 20BC898826BE9392009C6990;
+					};
+					20BC89A926BE9395009C6990 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 20BC898826BE9392009C6990;
+					};
+				};
+			};
+			buildConfigurationList = 20BC898426BE9392009C6990 /* Build configuration list for PBXProject "CopiPen" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20BC898026BE9392009C6990;
+			productRefGroup = 20BC898A26BE9392009C6990 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20BC898826BE9392009C6990 /* CopiPen */,
+				20BC899E26BE9395009C6990 /* CopiPenTests */,
+				20BC89A926BE9395009C6990 /* CopiPenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20BC898726BE9392009C6990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BC899426BE9395009C6990 /* Preview Assets.xcassets in Resources */,
+				20BC899126BE9395009C6990 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20BC899D26BE9395009C6990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20BC89A826BE9395009C6990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20BC898526BE9392009C6990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BC899626BE9395009C6990 /* Persistence.swift in Sources */,
+				20BC898F26BE9392009C6990 /* ContentView.swift in Sources */,
+				20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */,
+				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20BC899B26BE9395009C6990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BC89A426BE9395009C6990 /* CopiPenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20BC89A626BE9395009C6990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BC89AF26BE9395009C6990 /* CopiPenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20BC89A126BE9395009C6990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20BC898826BE9392009C6990 /* CopiPen */;
+			targetProxy = 20BC89A026BE9395009C6990 /* PBXContainerItemProxy */;
+		};
+		20BC89AC26BE9395009C6990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20BC898826BE9392009C6990 /* CopiPen */;
+			targetProxy = 20BC89AB26BE9395009C6990 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		20BC89B126BE9395009C6990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20BC89B226BE9395009C6990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20BC89B426BE9395009C6990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CopiPen/Preview Content\"";
+				DEVELOPMENT_TEAM = TQPN82UBBY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CopiPen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.CopiPen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20BC89B526BE9395009C6990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CopiPen/Preview Content\"";
+				DEVELOPMENT_TEAM = TQPN82UBBY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CopiPen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.CopiPen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		20BC89B726BE9395009C6990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQPN82UBBY;
+				INFOPLIST_FILE = CopiPenTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.CopiPenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CopiPen.app/CopiPen";
+			};
+			name = Debug;
+		};
+		20BC89B826BE9395009C6990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQPN82UBBY;
+				INFOPLIST_FILE = CopiPenTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.CopiPenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CopiPen.app/CopiPen";
+			};
+			name = Release;
+		};
+		20BC89BA26BE9395009C6990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQPN82UBBY;
+				INFOPLIST_FILE = CopiPenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.CopiPenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CopiPen;
+			};
+			name = Debug;
+		};
+		20BC89BB26BE9395009C6990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQPN82UBBY;
+				INFOPLIST_FILE = CopiPenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.CopiPenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CopiPen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20BC898426BE9392009C6990 /* Build configuration list for PBXProject "CopiPen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20BC89B126BE9395009C6990 /* Debug */,
+				20BC89B226BE9395009C6990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20BC89B326BE9395009C6990 /* Build configuration list for PBXNativeTarget "CopiPen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20BC89B426BE9395009C6990 /* Debug */,
+				20BC89B526BE9395009C6990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20BC89B626BE9395009C6990 /* Build configuration list for PBXNativeTarget "CopiPenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20BC89B726BE9395009C6990 /* Debug */,
+				20BC89B826BE9395009C6990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20BC89B926BE9395009C6990 /* Build configuration list for PBXNativeTarget "CopiPenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20BC89BA26BE9395009C6990 /* Debug */,
+				20BC89BB26BE9395009C6990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		20BC899726BE9395009C6990 /* CopiPen.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				20BC899826BE9395009C6990 /* CopiPen.xcdatamodel */,
+			);
+			currentVersion = 20BC899826BE9395009C6990 /* CopiPen.xcdatamodel */;
+			path = CopiPen.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 20BC898126BE9392009C6990 /* Project object */;
+}
