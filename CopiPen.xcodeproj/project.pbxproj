@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */; };
 		20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898C26BE9392009C6990 /* CopiPenApp.swift */; };
 		20BC898F26BE9392009C6990 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898E26BE9392009C6990 /* ContentView.swift */; };
 		20BC899126BE9395009C6990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BC899026BE9395009C6990 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BC898926BE9392009C6990 /* CopiPen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopiPen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BC898C26BE9392009C6990 /* CopiPenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenApp.swift; sourceTree = "<group>"; };
 		20BC898E26BE9392009C6990 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				20BC899A26BE9395009C6990 /* Info.plist */,
 				20BC899726BE9395009C6990 /* CopiPen.xcdatamodeld */,
 				20BC899226BE9395009C6990 /* Preview Content */,
+				207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */,
 			);
 			path = CopiPen;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				20BC899626BE9395009C6990 /* Persistence.swift in Sources */,
 				20BC898F26BE9392009C6990 /* ContentView.swift in Sources */,
 				20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */,
+				207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */,
 				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

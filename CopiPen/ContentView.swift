@@ -36,7 +36,8 @@ final class ContentViewModel: ObservableObject {
 
 struct ContentView: View {
     @ObservedObject private var viewModel: ContentViewModel = .init()
-
+    @Environment(\.scenePhase) var scenePhase
+    
     var body: some View {
         List {
             ForEach(viewModel.items) { content in
@@ -52,6 +53,11 @@ struct ContentView: View {
             print("onAppear")
             viewModel.update()
         })
+        .onChange(of: scenePhase) { scenePhase in
+            if scenePhase == .active {
+                viewModel.update()
+            }
+        }
     }
 }
 
