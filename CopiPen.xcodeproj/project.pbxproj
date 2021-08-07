@@ -91,6 +91,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		207CE2D226BEBF9800DF351B /* PasteBoardContent */ = {
+			isa = PBXGroup;
+			children = (
+				20BC898E26BE9392009C6990 /* PasteBoardContentListView.swift */,
+				207CE2D026BEBF4E00DF351B /* PasteBoardContentView.swift */,
+			);
+			path = PasteBoardContent;
+			sourceTree = "<group>";
+		};
 		20BC898026BE9392009C6990 = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +123,9 @@
 		20BC898B26BE9392009C6990 /* CopiPen */ = {
 			isa = PBXGroup;
 			children = (
+				207CE2D226BEBF9800DF351B /* PasteBoardContent */,
 				207CE2CD26BEB0F300DF351B /* CoreData */,
 				20BC898C26BE9392009C6990 /* CopiPenApp.swift */,
-				20BC898E26BE9392009C6990 /* PasteBoardContentListView.swift */,
-				207CE2D026BEBF4E00DF351B /* PasteBoardContentView.swift */,
 				20BC899026BE9395009C6990 /* Assets.xcassets */,
 				20BC899526BE9395009C6990 /* Persistence.swift */,
 				20BC899A26BE9395009C6990 /* Info.plist */,
