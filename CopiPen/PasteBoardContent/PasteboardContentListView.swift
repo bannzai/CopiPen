@@ -24,6 +24,7 @@ struct PasteboardContentListView: View {
                     }
                     .onDelete(perform: deleteItems)
                 }
+                .listStyle(PlainListStyle())
                 .onAppear(perform: {
                     addItem()
                 })
@@ -32,7 +33,7 @@ struct PasteboardContentListView: View {
                         addItem()
                     }
                 }
-                
+
                 if shownFeedback {
                     VStack {
                         Spacer()
