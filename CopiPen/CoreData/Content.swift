@@ -39,14 +39,15 @@ extension Content {
 
 extension UIPasteboard {
     func mapToContentType() -> Content.ContentType? {
-        if let text = string {
-            return .text(text)
-        } else if let image = image {
+        if let image = image {
             return .image(image)
         } else if let url = url {
             return .url(url)
+        } else if let text = string {
+            // Keep order for .text is last.
+            // UIPasteboard.text is contained iamge, url
+            return .text(text)
         }
-
         return nil
     }
 }
