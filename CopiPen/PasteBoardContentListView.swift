@@ -19,16 +19,7 @@ struct PasteBoardContentListView: View {
     var body: some View {
         List {
             ForEach(contents) { content in
-                switch content.contentType {
-                case nil:
-                    EmptyView()
-                case let .text(text):
-                    Text(text)
-                case let .image(image):
-                    Image(uiImage: image)
-                case let .url(url):
-                    Text(url.absoluteString)
-                }
+                PasteBoardContentView(content: content)
             }
             .onDelete(perform: deleteItems)
         }
