@@ -10,19 +10,21 @@ struct PasteboardContentListView: View {
     private var contents: FetchedResults<Content>
 
     var body: some View {
-        List {
-            ForEach(contents) { content in
-                PasteboardContentView(content: content)
+        NavigationView {
+            List {
+                ForEach(contents) { content in
+                    PasteboardContentView(content: content)
+                }
+                .onDelete(perform: deleteItems)
             }
-            .onDelete(perform: deleteItems)
-        }
-        .onAppear(perform: {
-            deleteAll()
-            addItem()
-        })
-        .onChange(of: scenePhase) { scenePhase in
-            if scenePhase == .active {
+            .onAppear(perform: {
+                deleteAll()
                 addItem()
+            })
+            .onChange(of: scenePhase) { scenePhase in
+                if scenePhase == .active {
+                    addItem()
+                }
             }
         }
     }
