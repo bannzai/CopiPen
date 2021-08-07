@@ -7,8 +7,20 @@ extension Content {
         case text(String)
         case image(UIImage)
         case url(URL)
+        
+        // See more details: https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html
+        var pasteboardType: String {
+            switch self {
+            case .text:
+                return "public.text"
+            case .image:
+                return "public.image"
+            case .url:
+                return "public.data"
+            }
+        }
     }
-
+    
     static func createAndSave(viewContext: NSManagedObjectContext, contentType: ContentType) throws {
         let content = Content(context: viewContext)
         content.id = UUID()
@@ -21,7 +33,7 @@ extension Content {
         case .url(let url):
             content.url = url
         }
-
+        
         try viewContext.save()
     }
     

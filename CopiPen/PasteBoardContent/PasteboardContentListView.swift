@@ -13,6 +13,19 @@ struct PasteboardContentListView: View {
         List {
             ForEach(contents) { content in
                 PasteboardContentView(content: content)
+                    .onTapGesture {
+                        if let contentType = content.contentType {
+                            let pasteboardType = contentType.pasteboardType
+                            switch contentType {
+                            case .text(let text):
+                                UIPasteboard.general.setValue(text, forPasteboardType: pasteboardType)
+                            case .image(let image):
+                                UIPasteboard.general.setValue(image, forPasteboardType: pasteboardType)
+                            case .url(let url):
+                                UIPasteboard.general.setValue(url, forPasteboardType: pasteboardType)
+                            }
+                        }
+                    }
             }
             .onDelete(perform: deleteItems)
         }
