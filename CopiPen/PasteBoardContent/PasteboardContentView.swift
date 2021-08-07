@@ -9,7 +9,7 @@ struct PasteboardContentView: View {
         case let .text(text):
             PasteboardContentTextComponent(text: text)
         case let .image(image):
-            PastBoardContentImageComponent(image: image)
+            PasteboardContentImageComponent(image: image)
         case let .url(url):
             PasteboardContentURLComponent(url: url)
         }
