@@ -1,14 +1,7 @@
-//
-//  PasteBoardContentListView.swift
-//  CopiPen
-//
-//  Created by 廣瀬雄大 on 2021/08/07.
-//
-
 import SwiftUI
 import CoreData
 
-struct PasteBoardContentListView: View {
+struct PasteboardContentListView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
@@ -19,7 +12,7 @@ struct PasteBoardContentListView: View {
     var body: some View {
         List {
             ForEach(contents) { content in
-                PasteBoardContentView(content: content)
+                PasteboardContentView(content: content)
             }
             .onDelete(perform: deleteItems)
         }
@@ -71,8 +64,8 @@ struct PasteBoardContentListView: View {
     }
 }
 
-struct PasteBoardContentListView_Previews: PreviewProvider {
+struct PasteboardContentListView_Previews: PreviewProvider {
     static var previews: some View {
-        PasteBoardContentListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        PasteboardContentListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

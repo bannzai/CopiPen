@@ -1,7 +1,7 @@
 import UIKit
 import SwiftUI
 
-struct PastBoardContentImageComponent: View {
+struct PasteboardContentImageComponent: View {
     let image: UIImage
 
     var body: some View {

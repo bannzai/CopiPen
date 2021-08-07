@@ -14,7 +14,7 @@ struct CopiPenApp: App {
 
     var body: some Scene {
         WindowGroup {
-            PasteBoardContentListView()
+            PasteboardContentListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

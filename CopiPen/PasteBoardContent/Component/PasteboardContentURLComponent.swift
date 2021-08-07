@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PasteBoardContentURLComponent: View {
+struct PasteboardContentURLComponent: View {
     let url: URL
 
     var body: some View {
