@@ -18,7 +18,6 @@ struct PasteboardContentListView: View {
                 .onDelete(perform: deleteItems)
             }
             .onAppear(perform: {
-                deleteAll()
                 addItem()
             })
             .onChange(of: scenePhase) { scenePhase in
@@ -26,12 +25,6 @@ struct PasteboardContentListView: View {
                     addItem()
                 }
             }
-        }
-    }
-    
-    private func deleteAll() {
-        contents.forEach {
-            viewContext.delete($0)
         }
     }
     
