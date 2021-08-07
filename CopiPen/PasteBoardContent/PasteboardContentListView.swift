@@ -47,7 +47,7 @@ struct PasteboardContentListView: View {
                     }
                 }
             }
-            .navigationTitle("Pasteboard List")
+            .navigationTitle("Copied List")
         }
     }
     
