@@ -5,8 +5,9 @@
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="url" optional="YES" attributeType="URI"/>
     </entity>
     <elements>
-        <element name="Content" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Content" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>
