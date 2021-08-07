@@ -10,7 +10,7 @@
 		207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */; };
 		207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CE26BEB0FB00DF351B /* Content.swift */; };
 		20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898C26BE9392009C6990 /* CopiPenApp.swift */; };
-		20BC898F26BE9392009C6990 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898E26BE9392009C6990 /* ContentView.swift */; };
+		20BC898F26BE9392009C6990 /* PasteBoardContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898E26BE9392009C6990 /* PasteBoardContentListView.swift */; };
 		20BC899126BE9395009C6990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BC899026BE9395009C6990 /* Assets.xcassets */; };
 		20BC899426BE9395009C6990 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BC899326BE9395009C6990 /* Preview Assets.xcassets */; };
 		20BC899626BE9395009C6990 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC899526BE9395009C6990 /* Persistence.swift */; };
@@ -41,7 +41,7 @@
 		207CE2CE26BEB0FB00DF351B /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		20BC898926BE9392009C6990 /* CopiPen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopiPen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BC898C26BE9392009C6990 /* CopiPenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenApp.swift; sourceTree = "<group>"; };
-		20BC898E26BE9392009C6990 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		20BC898E26BE9392009C6990 /* PasteBoardContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardContentListView.swift; sourceTree = "<group>"; };
 		20BC899026BE9395009C6990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20BC899326BE9395009C6990 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20BC899526BE9395009C6990 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			children = (
 				207CE2CD26BEB0F300DF351B /* CoreData */,
 				20BC898C26BE9392009C6990 /* CopiPenApp.swift */,
-				20BC898E26BE9392009C6990 /* ContentView.swift */,
+				20BC898E26BE9392009C6990 /* PasteBoardContentListView.swift */,
 				20BC899026BE9395009C6990 /* Assets.xcassets */,
 				20BC899526BE9395009C6990 /* Persistence.swift */,
 				20BC899A26BE9395009C6990 /* Info.plist */,
@@ -280,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20BC899626BE9395009C6990 /* Persistence.swift in Sources */,
-				20BC898F26BE9392009C6990 /* ContentView.swift in Sources */,
+				20BC898F26BE9392009C6990 /* PasteBoardContentListView.swift in Sources */,
 				20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */,
 				207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */,
 				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,

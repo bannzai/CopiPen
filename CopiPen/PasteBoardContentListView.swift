@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PasteBoardContentListView.swift
 //  CopiPen
 //
 //  Created by 廣瀬雄大 on 2021/08/07.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct PasteBoardContentListView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
@@ -80,8 +80,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PasteBoardContentListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        PasteBoardContentListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
