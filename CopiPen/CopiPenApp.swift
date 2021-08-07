@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct CopiPenApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PasteboardContentListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

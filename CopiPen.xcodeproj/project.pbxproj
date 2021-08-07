@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */; };
+		207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CE26BEB0FB00DF351B /* Content.swift */; };
+		207CE2D126BEBF4E00DF351B /* PasteboardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D026BEBF4E00DF351B /* PasteboardContentView.swift */; };
+		207CE2D526BEBFC200DF351B /* PasteboardContentTextComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D426BEBFC200DF351B /* PasteboardContentTextComponent.swift */; };
+		207CE2D726BEC05A00DF351B /* PasteboardContentImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D626BEC05A00DF351B /* PasteboardContentImageComponent.swift */; };
+		207CE2D926BEC09600DF351B /* PasteboardContentURLComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D826BEC09600DF351B /* PasteboardContentURLComponent.swift */; };
 		20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898C26BE9392009C6990 /* CopiPenApp.swift */; };
-		20BC898F26BE9392009C6990 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898E26BE9392009C6990 /* ContentView.swift */; };
+		20BC898F26BE9392009C6990 /* PasteboardContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898E26BE9392009C6990 /* PasteboardContentListView.swift */; };
 		20BC899126BE9395009C6990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BC899026BE9395009C6990 /* Assets.xcassets */; };
 		20BC899426BE9395009C6990 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BC899326BE9395009C6990 /* Preview Assets.xcassets */; };
 		20BC899626BE9395009C6990 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC899526BE9395009C6990 /* Persistence.swift */; };
@@ -35,9 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		207CE2CE26BEB0FB00DF351B /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		207CE2D026BEBF4E00DF351B /* PasteboardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentView.swift; sourceTree = "<group>"; };
+		207CE2D426BEBFC200DF351B /* PasteboardContentTextComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentTextComponent.swift; sourceTree = "<group>"; };
+		207CE2D626BEC05A00DF351B /* PasteboardContentImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentImageComponent.swift; sourceTree = "<group>"; };
+		207CE2D826BEC09600DF351B /* PasteboardContentURLComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentURLComponent.swift; sourceTree = "<group>"; };
 		20BC898926BE9392009C6990 /* CopiPen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopiPen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BC898C26BE9392009C6990 /* CopiPenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenApp.swift; sourceTree = "<group>"; };
-		20BC898E26BE9392009C6990 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		20BC898E26BE9392009C6990 /* PasteboardContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentListView.swift; sourceTree = "<group>"; };
 		20BC899026BE9395009C6990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20BC899326BE9395009C6990 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20BC899526BE9395009C6990 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -76,6 +88,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		207CE2CD26BEB0F300DF351B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				20BC899726BE9395009C6990 /* CopiPen.xcdatamodeld */,
+				207CE2CE26BEB0FB00DF351B /* Content.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		207CE2D226BEBF9800DF351B /* PasteBoardContent */ = {
+			isa = PBXGroup;
+			children = (
+				207CE2D326BEBFB200DF351B /* Component */,
+				20BC898E26BE9392009C6990 /* PasteboardContentListView.swift */,
+				207CE2D026BEBF4E00DF351B /* PasteboardContentView.swift */,
+			);
+			path = PasteBoardContent;
+			sourceTree = "<group>";
+		};
+		207CE2D326BEBFB200DF351B /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				207CE2D426BEBFC200DF351B /* PasteboardContentTextComponent.swift */,
+				207CE2D626BEC05A00DF351B /* PasteboardContentImageComponent.swift */,
+				207CE2D826BEC09600DF351B /* PasteboardContentURLComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		20BC898026BE9392009C6990 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +140,14 @@
 		20BC898B26BE9392009C6990 /* CopiPen */ = {
 			isa = PBXGroup;
 			children = (
+				207CE2D226BEBF9800DF351B /* PasteBoardContent */,
+				207CE2CD26BEB0F300DF351B /* CoreData */,
 				20BC898C26BE9392009C6990 /* CopiPenApp.swift */,
-				20BC898E26BE9392009C6990 /* ContentView.swift */,
 				20BC899026BE9395009C6990 /* Assets.xcassets */,
 				20BC899526BE9395009C6990 /* Persistence.swift */,
 				20BC899A26BE9395009C6990 /* Info.plist */,
-				20BC899726BE9395009C6990 /* CopiPen.xcdatamodeld */,
 				20BC899226BE9395009C6990 /* Preview Content */,
+				207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */,
 			);
 			path = CopiPen;
 			sourceTree = "<group>";
@@ -265,10 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207CE2D726BEC05A00DF351B /* PasteboardContentImageComponent.swift in Sources */,
 				20BC899626BE9395009C6990 /* Persistence.swift in Sources */,
-				20BC898F26BE9392009C6990 /* ContentView.swift in Sources */,
+				207CE2D126BEBF4E00DF351B /* PasteboardContentView.swift in Sources */,
+				20BC898F26BE9392009C6990 /* PasteboardContentListView.swift in Sources */,
+				207CE2D926BEC09600DF351B /* PasteboardContentURLComponent.swift in Sources */,
 				20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */,
+				207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */,
 				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,
+				207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */,
+				207CE2D526BEBFC200DF351B /* PasteboardContentTextComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
