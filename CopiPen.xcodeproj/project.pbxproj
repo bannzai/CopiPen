@@ -10,6 +10,9 @@
 		207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */; };
 		207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CE26BEB0FB00DF351B /* Content.swift */; };
 		207CE2D126BEBF4E00DF351B /* PasteBoardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D026BEBF4E00DF351B /* PasteBoardContentView.swift */; };
+		207CE2D526BEBFC200DF351B /* PasteBoardContentTextComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D426BEBFC200DF351B /* PasteBoardContentTextComponent.swift */; };
+		207CE2D726BEC05A00DF351B /* PastBoardContentImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D626BEC05A00DF351B /* PastBoardContentImageComponent.swift */; };
+		207CE2D926BEC09600DF351B /* PasteBoardContentURLComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D826BEC09600DF351B /* PasteBoardContentURLComponent.swift */; };
 		20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898C26BE9392009C6990 /* CopiPenApp.swift */; };
 		20BC898F26BE9392009C6990 /* PasteBoardContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC898E26BE9392009C6990 /* PasteBoardContentListView.swift */; };
 		20BC899126BE9395009C6990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BC899026BE9395009C6990 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 		207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207CE2CE26BEB0FB00DF351B /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		207CE2D026BEBF4E00DF351B /* PasteBoardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardContentView.swift; sourceTree = "<group>"; };
+		207CE2D426BEBFC200DF351B /* PasteBoardContentTextComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardContentTextComponent.swift; sourceTree = "<group>"; };
+		207CE2D626BEC05A00DF351B /* PastBoardContentImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoardContentImageComponent.swift; sourceTree = "<group>"; };
+		207CE2D826BEC09600DF351B /* PasteBoardContentURLComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardContentURLComponent.swift; sourceTree = "<group>"; };
 		20BC898926BE9392009C6990 /* CopiPen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopiPen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BC898C26BE9392009C6990 /* CopiPenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenApp.swift; sourceTree = "<group>"; };
 		20BC898E26BE9392009C6990 /* PasteBoardContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardContentListView.swift; sourceTree = "<group>"; };
@@ -94,10 +100,21 @@
 		207CE2D226BEBF9800DF351B /* PasteBoardContent */ = {
 			isa = PBXGroup;
 			children = (
+				207CE2D326BEBFB200DF351B /* Component */,
 				20BC898E26BE9392009C6990 /* PasteBoardContentListView.swift */,
 				207CE2D026BEBF4E00DF351B /* PasteBoardContentView.swift */,
 			);
 			path = PasteBoardContent;
+			sourceTree = "<group>";
+		};
+		207CE2D326BEBFB200DF351B /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				207CE2D426BEBFC200DF351B /* PasteBoardContentTextComponent.swift */,
+				207CE2D626BEC05A00DF351B /* PastBoardContentImageComponent.swift */,
+				207CE2D826BEC09600DF351B /* PasteBoardContentURLComponent.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		20BC898026BE9392009C6990 = {
@@ -290,13 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207CE2D726BEC05A00DF351B /* PastBoardContentImageComponent.swift in Sources */,
 				20BC899626BE9395009C6990 /* Persistence.swift in Sources */,
 				207CE2D126BEBF4E00DF351B /* PasteBoardContentView.swift in Sources */,
 				20BC898F26BE9392009C6990 /* PasteBoardContentListView.swift in Sources */,
+				207CE2D926BEC09600DF351B /* PasteBoardContentURLComponent.swift in Sources */,
 				20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */,
 				207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */,
 				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,
 				207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */,
+				207CE2D526BEBFC200DF351B /* PasteBoardContentTextComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

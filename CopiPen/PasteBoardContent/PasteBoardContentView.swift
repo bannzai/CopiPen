@@ -7,11 +7,11 @@ struct PasteBoardContentView: View {
         case nil:
             EmptyView()
         case let .text(text):
-            Text(text)
+            PasteBoardContentTextComponent(text: text)
         case let .image(image):
-            Image(uiImage: image)
+            PastBoardContentImageComponent(image: image)
         case let .url(url):
-            Text(url.absoluteString)
+            PasteBoardContentURLComponent(url: url)
         }
     }
 }
