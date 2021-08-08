@@ -31,7 +31,7 @@ struct PasteboardContentView: View {
             case .text(let text):
                 UIPasteboard.general.setValue(text, forPasteboardType: pasteboardType)
             case .image(let image):
-                UIPasteboard.general.setValue(image, forPasteboardType: pasteboardType)
+                UIPasteboard.general.setValue(image.jpegData(compressionQuality: 1)!, forPasteboardType: pasteboardType)
             case .url(let url):
                 UIPasteboard.general.setValue(url, forPasteboardType: pasteboardType)
             }

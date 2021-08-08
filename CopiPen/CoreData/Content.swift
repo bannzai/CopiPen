@@ -14,7 +14,7 @@ extension Content {
             case .text:
                 return "public.text"
             case .image:
-                return "public.image"
+                return "public.jpeg"
             case .url:
                 return "public.data"
             }
@@ -29,7 +29,7 @@ extension Content {
         case .text(let text):
             content.text = text
         case .image(let image):
-            content.image = image.jpegData(compressionQuality: 0.7)
+            content.image = image.jpegData(compressionQuality: 1)
         case .url(let url):
             content.url = url
         }
