@@ -8,7 +8,7 @@ struct PasteboardContentListView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Content.timestamp, ascending: true)],
         animation: .default)
     private var contents: FetchedResults<Content>
-    @State private var shownFeedback: Bool = true
+    @State private var shownFeedback: Bool = false
 
     var body: some View {
         NavigationView {
