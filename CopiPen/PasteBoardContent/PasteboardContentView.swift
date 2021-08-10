@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct PasteboardContentView: View {
-    let content: Content
-    let didEndPaste: (Content.ContentType) -> Void
+    let content: CopiedContent
+    let didEndPaste: (CopiedContent.ContentType) -> Void
 
     var body: some View {
         Button(action: action, label: {

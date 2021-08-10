@@ -2,7 +2,7 @@ import CoreData
 import Foundation
 import UIKit
 
-extension Content {
+extension CopiedContent {
     enum ContentType {
         case text(String)
         case image(UIImage)
@@ -22,7 +22,7 @@ extension Content {
     }
     
     static func createAndSave(viewContext: NSManagedObjectContext, contentType: ContentType) throws {
-        let content = Content(context: viewContext)
+        let content = CopiedContent(context: viewContext)
         content.id = UUID()
         content.timestamp = Date()
         switch contentType {
@@ -50,7 +50,7 @@ extension Content {
 }
 
 extension UIPasteboard {
-    func mapToContentType() -> Content.ContentType? {
+    func mapToContentType() -> CopiedContent.ContentType? {
         if let image = image {
             return .image(image)
         } else if let url = url {

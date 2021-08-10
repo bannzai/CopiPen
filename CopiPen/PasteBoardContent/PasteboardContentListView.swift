@@ -5,9 +5,9 @@ struct PasteboardContentListView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Content.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \CopiedContent.timestamp, ascending: true)],
         animation: .default)
-    private var contents: FetchedResults<Content>
+    private var contents: FetchedResults<CopiedContent>
     @State private var shownFeedback: Bool = false
 
     var body: some View {
@@ -18,7 +18,7 @@ struct PasteboardContentListView: View {
                         PasteboardContentView(content: content, didEndPaste: { contentType in
                             withAnimation {
                                 shownFeedback = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                                     withAnimation {
                                         shownFeedback = false
                                     }
@@ -59,7 +59,7 @@ struct PasteboardContentListView: View {
         if let contentType = UIPasteboard.general.mapToContentType() {
             withAnimation {
                 do {
-                    try Content.createAndSave(viewContext: viewContext, contentType: contentType)
+                    try CopiedContent.createAndSave(viewContext: viewContext, contentType: contentType)
                 } catch {
                     // Replace this implementation with code to handle the error appropriately.
                     // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.

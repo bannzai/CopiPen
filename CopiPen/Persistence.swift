@@ -14,7 +14,7 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Content(context: viewContext)
+            let newItem = CopiedContent(context: viewContext)
             newItem.timestamp = Date()
         }
         do {
