@@ -5,7 +5,7 @@ struct PasteboardContentView: View {
     let didEndPaste: (Content.ContentType) -> Void
 
     var body: some View {
-        Group {
+        Button(action: action, label: {
             switch content.contentType {
             case nil:
                 EmptyView()
@@ -16,11 +16,10 @@ struct PasteboardContentView: View {
             case let .url(url):
                 PasteboardContentURLComponent(url: url)
             }
-        }
-        .onTapGesture(perform: onTap)
+        })
     }
     
-    private func onTap() {
+    private func action() {
         if let contentType = content.contentType {
             defer {
                 didEndPaste(contentType)

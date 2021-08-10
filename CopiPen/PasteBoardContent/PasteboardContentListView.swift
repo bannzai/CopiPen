@@ -16,9 +16,13 @@ struct PasteboardContentListView: View {
                 List {
                     ForEach(contents) { content in
                         PasteboardContentView(content: content, didEndPaste: { contentType in
-                            shownFeedback = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                shownFeedback = false
+                            withAnimation {
+                                shownFeedback = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    withAnimation {
+                                        shownFeedback = false
+                                    }
+                                }
                             }
                         })
                     }
