@@ -16,13 +16,13 @@ extension CopiedContent {
         }
     }
 
-    static func createAndSave(viewContext: NSManagedObjectContext) throws {
+    static func createAndSave(viewContext: NSManagedObjectContext) throws -> CopiedContent? {
         if UIPasteboard.general.items.isEmpty {
-            return
+            return nil
         }
         if UIPasteboard.general.items.count == 1 && UIPasteboard.general.items.first!.isEmpty {
             // NOTE: If no content on UIPasteboard, it has 1 empty element
-            return
+            return nil
         }
         let content = CopiedContent(context: viewContext)
         content.id = UUID()
@@ -30,6 +30,8 @@ extension CopiedContent {
         content.items = UIPasteboard.general.items
 
         try viewContext.save()
+
+        return content
     }
     
     var preferredContentItem: Item? {

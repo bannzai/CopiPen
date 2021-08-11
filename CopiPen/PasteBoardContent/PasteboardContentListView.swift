@@ -82,10 +82,11 @@ struct PasteboardContentListView: View {
     private func addItem() {
         withAnimation {
             do {
-                try CopiedContent.createAndSave(viewContext: viewContext)
-                shownUndoToast = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    shownUndoToast = false
+                if let _ = try CopiedContent.createAndSave(viewContext: viewContext) {
+                    shownUndoToast = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        shownUndoToast = false
+                    }
                 }
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
