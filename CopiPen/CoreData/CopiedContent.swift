@@ -17,17 +17,18 @@ extension CopiedContent {
     }
 
     static func createAndSave(viewContext: NSManagedObjectContext) throws -> CopiedContent? {
-        if UIPasteboard.general.items.isEmpty {
+        let items = UIPasteboard.general.items
+        if items.isEmpty {
             return nil
         }
-        if UIPasteboard.general.items.count == 1 && UIPasteboard.general.items.first!.isEmpty {
+        if items.count == 1 && items.first!.isEmpty {
             // NOTE: If no content on UIPasteboard, it has 1 empty element
             return nil
         }
         let content = CopiedContent(context: viewContext)
         content.id = UUID()
         content.createdDate = Date()
-        content.items = UIPasteboard.general.items
+        content.items = items
 
         try viewContext.save()
 
