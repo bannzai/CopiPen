@@ -3,13 +3,10 @@
     <entity name="CopiedContent" representedClassName="CopiedContent" syncable="YES" codeGenerationType="class">
         <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="items" optional="YES" attributeType="Transformable" customClassName="[[String: Any]]"/>
         <attribute name="lastCopiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="text" optional="YES" attributeType="String"/>
-        <attribute name="url" optional="YES" attributeType="URI"/>
     </entity>
     <elements>
-        <element name="CopiedContent" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="CopiedContent" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

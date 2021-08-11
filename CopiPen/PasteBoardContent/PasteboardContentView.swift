@@ -2,11 +2,11 @@ import SwiftUI
 
 struct PasteboardContentView: View {
     let content: CopiedContent
-    let didEndPaste: (CopiedContent.ContentType) -> Void
+    let didEndPaste: (CopiedContent.Item) -> Void
 
     var body: some View {
         Button(action: action, label: {
-            switch content.contentType {
+            switch content.preferredContentItem?.kind {
             case nil:
                 EmptyView()
             case let .text(text):
@@ -20,20 +20,9 @@ struct PasteboardContentView: View {
     }
     
     private func action() {
-        if let contentType = content.contentType {
-            defer {
-                didEndPaste(contentType)
-            }
-
-            let pasteboardType = contentType.pasteboardType
-            switch contentType {
-            case .text(let text):
-                UIPasteboard.general.setValue(text, forPasteboardType: pasteboardType)
-            case .image(let image):
-                UIPasteboard.general.setValue(image.jpegData(compressionQuality: 1)!, forPasteboardType: pasteboardType)
-            case .url(let url):
-                UIPasteboard.general.setValue(url, forPasteboardType: pasteboardType)
-            }
+        if let item = content.preferredContentItem {
+            UIPasteboard.general.addItems(item.allItems)
+            didEndPaste(item)
         }
     }
 }
