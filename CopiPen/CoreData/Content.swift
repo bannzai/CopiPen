@@ -6,7 +6,7 @@ import UniformTypeIdentifiers
 extension CopiedContent {
     struct Item {
         let key: String
-        let kind: ContentKind
+        let preferredKind: ContentKind
         let allItems: [[String: Any]]
 
         enum ContentKind {
@@ -39,10 +39,10 @@ extension CopiedContent {
                         return nil
                     }
                     if let data = value as? Data, let image = UIImage(data: data) {
-                        return Item(key: key, kind: .image(image), allItems: items)
+                        return Item(key: key, preferredKind: .image(image), allItems: items)
                     }
                     if let image = value as? UIImage {
-                        return Item(key: key, kind: .image(image), allItems: items)
+                        return Item(key: key, preferredKind: .image(image), allItems: items)
                     }
                     return nil
                 }
@@ -50,13 +50,13 @@ extension CopiedContent {
                     guard let value = dictionary[key], let url = value as? URL else {
                         return nil
                     }
-                    return Item(key: key, kind: .url(url), allItems: items)
+                    return Item(key: key, preferredKind: .url(url), allItems: items)
                 }
                 if utType.conforms(to: .text) {
                     guard let value = dictionary[key], let text = value as? String else {
                         return nil
                     }
-                    return Item(key: key, kind: .text(text), allItems: items)
+                    return Item(key: key, preferredKind: .text(text), allItems: items)
                 }
                 return nil
             }

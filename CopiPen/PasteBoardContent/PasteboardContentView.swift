@@ -6,7 +6,7 @@ struct PasteboardContentView: View {
 
     var body: some View {
         Button(action: action, label: {
-            switch content.preferredContentItem?.kind {
+            switch content.preferredContentItem?.preferredKind {
             case nil:
                 EmptyView()
             case let .text(text):
