@@ -6,8 +6,8 @@ struct PasteboardContentImageComponent: View {
 
     var body: some View {
         Image(uiImage: image)
-            .frame(maxHeight: 200)
-            .scaledToFill()
-            .clipped()
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(maxHeight: 100)
     }
 }
