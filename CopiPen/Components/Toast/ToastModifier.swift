@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct ToastModifier<Toast: View>: ViewModifier {
-    let duration: Double
     @Binding var isPresented: Bool
     @ViewBuilder let toast: () -> Toast
 
@@ -17,7 +16,7 @@ struct ToastModifier<Toast: View>: ViewModifier {
 }
 
 extension View {
-    func toast<Toast: View>(duration: TimeInterval = 1.5, isPresented: Binding<Bool>, @ViewBuilder toast: @escaping () -> Toast) -> some View {
-        modifier(ToastModifier(duration: duration, isPresented: isPresented, toast: toast))
+    func toast<Toast: View>(isPresented: Binding<Bool>, @ViewBuilder toast: @escaping () -> Toast) -> some View {
+        modifier(ToastModifier(isPresented: isPresented, toast: toast))
     }
 }
