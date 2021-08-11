@@ -5,9 +5,12 @@ struct PasteboardContentImageComponent: View {
     let image: UIImage
 
     var body: some View {
-        Image(uiImage: image)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(maxHeight: 100)
+        HStack {
+            Image(systemName: "photo")
+            Spacer().frame(width: 16)
+            Image(uiImage: image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        }
     }
 }
