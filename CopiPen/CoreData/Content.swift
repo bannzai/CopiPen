@@ -1,68 +1,66 @@
 import CoreData
 import Foundation
 import UIKit
+import UniformTypeIdentifiers
 
 extension CopiedContent {
-    enum ContentType {
-        case text(String)
-        case image(UIImage)
-        case url(URL)
-        
-        // See more details: https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html
-        var pasteboardType: String {
-            switch self {
-            case .text:
-                return "public.text"
-            case .image:
-                return "public.jpeg"
-            case .url:
-                return "public.data"
-            }
+    struct Item {
+        let key: String
+        let kind: ContentKind
+        let allItems: [[String: Any]]
+
+        enum ContentKind {
+            case text(String)
+            case image(UIImage)
+            case url(URL)
         }
     }
-    
+
     static func createAndSave(viewContext: NSManagedObjectContext) throws {
         let content = CopiedContent(context: viewContext)
         content.id = UUID()
         content.createdDate = Date()
         content.items = UIPasteboard.general.items
-        if let contentType = UIPasteboard.general.mapToContentType() {
-            switch contentType {
-            case .text(let text):
-                content.text = text
-            case .image(let image):
-                content.image = image.jpegData(compressionQuality: 1)
-            case .url(let url):
-                content.url = url
-            }
-        }
 
         try viewContext.save()
     }
     
-    var contentType: ContentType? {
-        if let text = text {
-            return .text(text)
-        } else if let image = image, let uiImage = UIImage(data: image) {
-            return .image(uiImage)
-        } else if let url = url {
-            return .url(url)
+    var preferredContentItem: Item? {
+        guard let items = items else {
+            return nil
         }
-        return nil
-    }
-}
-
-extension UIPasteboard {
-    func mapToContentType() -> CopiedContent.ContentType? {
-        if let image = image {
-            return .image(image)
-        } else if let url = url {
-            return .url(url)
-        } else if let text = string {
-            // Keep order for .text is last.
-            // UIPasteboard.text is contained iamge, url
-            return .text(text)
+        return items.flatMap { dictionary in
+            return dictionary.keys.compactMap { key -> Item? in
+                guard let utType = UTType(key) else {
+                    return nil
+                }
+                if utType.conforms(to: .image) {
+                    guard let value = dictionary[key] else {
+                        return nil
+                    }
+                    if let data = value as? Data, let image = UIImage(data: data) {
+                        return Item(key: key, kind: .image(image), allItems: items)
+                    }
+                    if let image = value as? UIImage {
+                        return Item(key: key, kind: .image(image), allItems: items)
+                    }
+                    return nil
+                }
+                if utType.conforms(to: .url) {
+                    guard let value = dictionary[key], let url = value as? URL else {
+                        return nil
+                    }
+                    return Item(key: key, kind: .url(url), allItems: items)
+                }
+                if utType.conforms(to: .text) {
+                    guard let value = dictionary[key], let text = value as? String else {
+                        return nil
+                    }
+                    return Item(key: key, kind: .text(text), allItems: items)
+                }
+                return nil
+            }
         }
-        return nil
+        .first
     }
 }
