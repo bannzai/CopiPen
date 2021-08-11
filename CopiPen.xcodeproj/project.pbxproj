@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2044A86E26C2B85400BACF99 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044A86D26C2B85400BACF99 /* ToastModifier.swift */; };
 		207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */; };
-		207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CE26BEB0FB00DF351B /* Content.swift */; };
+		207CE2CF26BEB0FB00DF351B /* CopiedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CE26BEB0FB00DF351B /* CopiedContent.swift */; };
 		207CE2D126BEBF4E00DF351B /* PasteboardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D026BEBF4E00DF351B /* PasteboardContentView.swift */; };
 		207CE2D526BEBFC200DF351B /* PasteboardContentTextComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D426BEBFC200DF351B /* PasteboardContentTextComponent.swift */; };
 		207CE2D726BEC05A00DF351B /* PasteboardContentImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D626BEC05A00DF351B /* PasteboardContentImageComponent.swift */; };
@@ -47,7 +47,7 @@
 /* Begin PBXFileReference section */
 		2044A86D26C2B85400BACF99 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		207CE2CE26BEB0FB00DF351B /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		207CE2CE26BEB0FB00DF351B /* CopiedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiedContent.swift; sourceTree = "<group>"; };
 		207CE2D026BEBF4E00DF351B /* PasteboardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentView.swift; sourceTree = "<group>"; };
 		207CE2D426BEBFC200DF351B /* PasteboardContentTextComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentTextComponent.swift; sourceTree = "<group>"; };
 		207CE2D626BEC05A00DF351B /* PasteboardContentImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentImageComponent.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				20BC899726BE9395009C6990 /* CopiPen.xcdatamodeld */,
-				207CE2CE26BEB0FB00DF351B /* Content.swift */,
+				207CE2CE26BEB0FB00DF351B /* CopiedContent.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,
 				2044A86E26C2B85400BACF99 /* ToastModifier.swift in Sources */,
 				20FD5D2126C39452007F7188 /* EquatableError.swift in Sources */,
-				207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */,
+				207CE2CF26BEB0FB00DF351B /* CopiedContent.swift in Sources */,
 				207CE2D526BEBFC200DF351B /* PasteboardContentTextComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
