@@ -8,7 +8,7 @@ struct PasteboardContentListView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \CopiedContent.timestamp, ascending: false)],
         animation: .default)
     private var contents: FetchedResults<CopiedContent>
-    @State private var shownFeedback: Bool = false
+    @State private var shownCopiedToast: Bool = false
 
     var body: some View {
         NavigationView {
@@ -17,10 +17,10 @@ struct PasteboardContentListView: View {
                     ForEach(contents) { content in
                         PasteboardContentView(content: content, didEndPaste: { contentType in
                             withAnimation {
-                                shownFeedback = true
+                                shownCopiedToast = true
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                                     withAnimation {
-                                        shownFeedback = false
+                                        shownCopiedToast = false
                                     }
                                 }
                             }
@@ -39,7 +39,7 @@ struct PasteboardContentListView: View {
                 }
             }
             .navigationTitle("Copied List")
-            .toast(isPresented: $shownFeedback) {
+            .toast(isPresented: $shownCopiedToast) {
                 VStack {
                     Spacer()
                     Text("コピーしました")
