@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2044A86E26C2B85400BACF99 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044A86D26C2B85400BACF99 /* Toast.swift */; };
+		2044A86E26C2B85400BACF99 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044A86D26C2B85400BACF99 /* ToastModifier.swift */; };
 		207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */; };
 		207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2CE26BEB0FB00DF351B /* Content.swift */; };
 		207CE2D126BEBF4E00DF351B /* PasteboardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CE2D026BEBF4E00DF351B /* PasteboardContentView.swift */; };
@@ -22,6 +22,7 @@
 		20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20BC899726BE9395009C6990 /* CopiPen.xcdatamodeld */; };
 		20BC89A426BE9395009C6990 /* CopiPenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC89A326BE9395009C6990 /* CopiPenTests.swift */; };
 		20BC89AF26BE9395009C6990 /* CopiPenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC89AE26BE9395009C6990 /* CopiPenUITests.swift */; };
+		20FD5D1E26C36379007F7188 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD5D1D26C36379007F7188 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2044A86D26C2B85400BACF99 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		2044A86D26C2B85400BACF99 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		207CE2CB26BE9A5B00DF351B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207CE2CE26BEB0FB00DF351B /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		207CE2D026BEBF4E00DF351B /* PasteboardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		20BC89AA26BE9395009C6990 /* CopiPenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopiPenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BC89AE26BE9395009C6990 /* CopiPenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenUITests.swift; sourceTree = "<group>"; };
 		20BC89B026BE9395009C6990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20FD5D1D26C36379007F7188 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2044A86C26C2B84A00BACF99 /* Modifiers */ = {
+		2044A86C26C2B84A00BACF99 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
-				2044A86D26C2B85400BACF99 /* Toast.swift */,
+				2044A86D26C2B85400BACF99 /* ToastModifier.swift */,
+				20FD5D1D26C36379007F7188 /* Toast.swift */,
 			);
-			path = Modifiers;
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		207CE2CD26BEB0F300DF351B /* CoreData */ = {
@@ -150,7 +153,7 @@
 		20BC898B26BE9392009C6990 /* CopiPen */ = {
 			isa = PBXGroup;
 			children = (
-				2044A86C26C2B84A00BACF99 /* Modifiers */,
+				20FD5D1C26C36343007F7188 /* Components */,
 				207CE2D226BEBF9800DF351B /* PasteBoardContent */,
 				207CE2CD26BEB0F300DF351B /* CoreData */,
 				20BC898C26BE9392009C6990 /* CopiPenApp.swift */,
@@ -187,6 +190,14 @@
 				20BC89B026BE9395009C6990 /* Info.plist */,
 			);
 			path = CopiPenUITests;
+			sourceTree = "<group>";
+		};
+		20FD5D1C26C36343007F7188 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2044A86C26C2B84A00BACF99 /* Toast */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				207CE2D726BEC05A00DF351B /* PasteboardContentImageComponent.swift in Sources */,
+				20FD5D1E26C36379007F7188 /* Toast.swift in Sources */,
 				20BC899626BE9395009C6990 /* Persistence.swift in Sources */,
 				207CE2D126BEBF4E00DF351B /* PasteboardContentView.swift in Sources */,
 				20BC898F26BE9392009C6990 /* PasteboardContentListView.swift in Sources */,
@@ -326,7 +338,7 @@
 				20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */,
 				207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */,
 				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,
-				2044A86E26C2B85400BACF99 /* Toast.swift in Sources */,
+				2044A86E26C2B85400BACF99 /* ToastModifier.swift in Sources */,
 				207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */,
 				207CE2D526BEBFC200DF351B /* PasteboardContentTextComponent.swift in Sources */,
 			);

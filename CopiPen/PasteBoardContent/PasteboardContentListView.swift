@@ -43,13 +43,7 @@ struct PasteboardContentListView: View {
             .toast(isPresented: $shownCopiedToast) {
                 VStack {
                     Spacer()
-                    Text("コピーしました")
-                        .font(.caption)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: 200)
-                        .padding(.vertical, 16)
-                        .background(Color(.systemGray3))
-                        .cornerRadius(24)
+                    Toast(text: "コピーしました")
                 }
             }
             .toast(isPresented: $shownUndoToast) {
@@ -59,14 +53,7 @@ struct PasteboardContentListView: View {
                         deleteItems(offsets: .init(integersIn: 0..<1))
                         shownUndoToast = false
                     }, label: {
-                        Text("ペーストを取り消す")
-                            .font(.caption)
-                            .foregroundColor(.white)
-                            .frame(maxWidth: 240)
-                            .padding(.vertical, 16)
-                            .background(Color(.systemGray3))
-                            .cornerRadius(24)
-
+                        Toast(text: "ペーストを取り消す")
                     })
                 }
             }
