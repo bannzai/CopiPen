@@ -9,6 +9,7 @@ struct PasteboardContentListView: View {
         animation: .default)
     private var contents: FetchedResults<CopiedContent>
     @State private var shownCopiedToast: Bool = false
+    @State private var shownUndoToast: Bool = false
 
     var body: some View {
         NavigationView {
@@ -46,9 +47,27 @@ struct PasteboardContentListView: View {
                         .font(.caption)
                         .foregroundColor(.white)
                         .frame(maxWidth: 200)
-                        .padding(.vertical, 12)
+                        .padding(.vertical, 16)
                         .background(Color(.systemGray3))
-                        .cornerRadius(16)
+                        .cornerRadius(24)
+                }
+            }
+            .toast(isPresented: $shownUndoToast) {
+                VStack {
+                    Spacer()
+                    Button(action: {
+                        deleteItems(offsets: .init(integersIn: 0..<1))
+                        shownUndoToast = false
+                    }, label: {
+                        Text("ペーストを取り消す")
+                            .font(.caption)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: 240)
+                            .padding(.vertical, 16)
+                            .background(Color(.systemGray3))
+                            .cornerRadius(24)
+
+                    })
                 }
             }
         }
@@ -59,6 +78,10 @@ struct PasteboardContentListView: View {
             withAnimation {
                 do {
                     try CopiedContent.createAndSave(viewContext: viewContext, contentType: contentType)
+                    shownUndoToast = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        shownUndoToast = false
+                    }
                 } catch {
                     // Replace this implementation with code to handle the error appropriately.
                     // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
