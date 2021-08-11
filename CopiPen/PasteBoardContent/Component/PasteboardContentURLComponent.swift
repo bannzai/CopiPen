@@ -4,7 +4,11 @@ struct PasteboardContentURLComponent: View {
     let url: URL
 
     var body: some View {
-        Text(url.absoluteString)
+        HStack {
+            Image(systemName: "link")
+            Spacer().frame(width: 16)
+            Text(url.absoluteString)
+        }
     }
 }
 
