@@ -22,7 +22,7 @@ struct PasteboardContentView: View {
     
     private func action() {
         if let item = content.preferredContentItem {
-            UIPasteboard.general.addItems(item.allItems)
+            UIPasteboard.general.setItems(item.allItems)
             onPaste(item)
         }
     }
