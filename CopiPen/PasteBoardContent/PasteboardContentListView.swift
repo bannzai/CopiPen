@@ -16,7 +16,7 @@ struct PasteboardContentListView: View {
             ZStack {
                 List {
                     ForEach(contents) { content in
-                        PasteboardContentView(content: content, didEndPaste: { contentType in
+                        PasteboardContentView(content: content, onPaste: { contentType in
                             withAnimation {
                                 shownCopiedToast = true
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {

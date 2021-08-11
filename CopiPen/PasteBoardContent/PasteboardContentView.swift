@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PasteboardContentView: View {
     let content: CopiedContent
-    let didEndPaste: (CopiedContent.Item) -> Void
+    let onPaste: (CopiedContent.Item) -> Void
 
     var body: some View {
         Button(action: action, label: {
@@ -22,7 +22,7 @@ struct PasteboardContentView: View {
     private func action() {
         if let item = content.preferredContentItem {
             UIPasteboard.general.addItems(item.allItems)
-            didEndPaste(item)
+            onPaste(item)
         }
     }
 }
