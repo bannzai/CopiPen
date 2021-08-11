@@ -23,6 +23,7 @@
 		20BC89A426BE9395009C6990 /* CopiPenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC89A326BE9395009C6990 /* CopiPenTests.swift */; };
 		20BC89AF26BE9395009C6990 /* CopiPenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC89AE26BE9395009C6990 /* CopiPenUITests.swift */; };
 		20FD5D1E26C36379007F7188 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD5D1D26C36379007F7188 /* Toast.swift */; };
+		20FD5D2126C39452007F7188 /* EquatableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD5D2026C39452007F7188 /* EquatableError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		20BC89AE26BE9395009C6990 /* CopiPenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiPenUITests.swift; sourceTree = "<group>"; };
 		20BC89B026BE9395009C6990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20FD5D1D26C36379007F7188 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		20FD5D2026C39452007F7188 /* EquatableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		20BC898B26BE9392009C6990 /* CopiPen */ = {
 			isa = PBXGroup;
 			children = (
+				20FD5D1F26C3944B007F7188 /* Error */,
 				20FD5D1C26C36343007F7188 /* Components */,
 				207CE2D226BEBF9800DF351B /* PasteBoardContent */,
 				207CE2CD26BEB0F300DF351B /* CoreData */,
@@ -198,6 +201,14 @@
 				2044A86C26C2B84A00BACF99 /* Toast */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		20FD5D1F26C3944B007F7188 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				20FD5D2026C39452007F7188 /* EquatableError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +350,7 @@
 				207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */,
 				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,
 				2044A86E26C2B85400BACF99 /* ToastModifier.swift in Sources */,
+				20FD5D2126C39452007F7188 /* EquatableError.swift in Sources */,
 				207CE2CF26BEB0FB00DF351B /* Content.swift in Sources */,
 				207CE2D526BEBFC200DF351B /* PasteboardContentTextComponent.swift in Sources */,
 			);
