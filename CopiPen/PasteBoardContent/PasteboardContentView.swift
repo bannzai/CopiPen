@@ -17,6 +17,7 @@ struct PasteboardContentView: View {
                 PasteboardContentURLComponent(url: url)
             }
         })
+        .frame(maxHeight: 120)
     }
     
     private func action() {
