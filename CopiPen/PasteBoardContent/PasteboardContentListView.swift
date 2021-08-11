@@ -8,8 +8,9 @@ struct PasteboardContentListView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \CopiedContent.createdDate, ascending: false)],
         animation: .default)
     private var contents: FetchedResults<CopiedContent>
-    @State private var shownCopiedToast: Bool = false
-    @State private var shownUndoToast: Bool = false
+    @State private var shownCopiedToast = false
+    @State private var shownUndoToast = false
+    @State private var isDeleteAllDialogPresented = false
 
     var body: some View {
         NavigationView {
@@ -40,6 +41,13 @@ struct PasteboardContentListView: View {
                 }
             }
             .navigationTitle("Copied List")
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { isDeleteAllDialogPresented = true }, label: {
+                        Image(systemName: "trash")
+                    })
+                }
+            })
             .toast(isPresented: $shownCopiedToast) {
                 VStack {
                     Spacer()
@@ -57,6 +65,12 @@ struct PasteboardContentListView: View {
                     })
                 }
             }
+            .background(
+                EmptyView()
+                    .alert(isPresented: $isDeleteAllDialogPresented) {
+                        Alert(title: Text("すべて削除します"), message: Text("削除したデータは復元できません"), primaryButton: .default(Text("削除する")), secondaryButton: .cancel())
+                    }
+            )
         }
     }
     
