@@ -34,29 +34,26 @@ extension CopiedContent {
                 guard let utType = UTType(key) else {
                     return nil
                 }
+                guard let value = dictionary[key] else {
+                    return nil
+                }
                 if utType.conforms(to: .image) {
-                    guard let value = dictionary[key] else {
-                        return nil
-                    }
                     if let data = value as? Data, let image = UIImage(data: data) {
                         return Item(key: key, preferredKind: .image(image), allItems: items)
                     }
                     if let image = value as? UIImage {
                         return Item(key: key, preferredKind: .image(image), allItems: items)
                     }
-                    return nil
                 }
                 if utType.conforms(to: .url) {
-                    guard let value = dictionary[key], let url = value as? URL else {
-                        return nil
+                    if let url = value as? URL {
+                        return Item(key: key, preferredKind: .url(url), allItems: items)
                     }
-                    return Item(key: key, preferredKind: .url(url), allItems: items)
                 }
                 if utType.conforms(to: .text) {
-                    guard let value = dictionary[key], let text = value as? String else {
-                        return nil
+                    if let text = value as? String {
+                        return Item(key: key, preferredKind: .text(text), allItems: items)
                     }
-                    return Item(key: key, preferredKind: .text(text), allItems: items)
                 }
                 return nil
             }
