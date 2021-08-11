@@ -5,7 +5,7 @@ struct PasteboardContentListView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \CopiedContent.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \CopiedContent.timestamp, ascending: false)],
         animation: .default)
     private var contents: FetchedResults<CopiedContent>
     @State private var shownFeedback: Bool = false
