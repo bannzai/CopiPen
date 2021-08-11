@@ -11,6 +11,7 @@ struct PasteboardContentListView: View {
     @State private var shownCopiedToast = false
     @State private var shownUndoToast = false
     @State private var isDeleteAllDialogPresented = false
+    @State private var alertError: AlertError?
 
     var body: some View {
         NavigationView {
@@ -76,6 +77,10 @@ struct PasteboardContentListView: View {
                         )
                     }
             )
+            .background(
+                EmptyView()
+                    .errorAlert(error: $alertError)
+            )
         }
     }
     
@@ -89,10 +94,7 @@ struct PasteboardContentListView: View {
                     }
                 }
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                alertError = .init(kind: .delete, error: .init(error: error))
             }
         }
     }
@@ -104,10 +106,7 @@ struct PasteboardContentListView: View {
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                alertError = .init(kind: .delete, error: .init(error: error))
             }
         }
     }
@@ -118,10 +117,7 @@ struct PasteboardContentListView: View {
         do {
             try viewContext.save()
         } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            alertError = .init(kind: .delete, error: .init(error: error))
         }
     }
 }

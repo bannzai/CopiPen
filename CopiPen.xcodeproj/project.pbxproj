@@ -24,6 +24,7 @@
 		20BC89AF26BE9395009C6990 /* CopiPenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC89AE26BE9395009C6990 /* CopiPenUITests.swift */; };
 		20FD5D1E26C36379007F7188 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD5D1D26C36379007F7188 /* Toast.swift */; };
 		20FD5D2126C39452007F7188 /* EquatableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD5D2026C39452007F7188 /* EquatableError.swift */; };
+		20FD5D2526C394FB007F7188 /* ErrorAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD5D2426C394FB007F7188 /* ErrorAlertModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		20BC89B026BE9395009C6990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20FD5D1D26C36379007F7188 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		20FD5D2026C39452007F7188 /* EquatableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableError.swift; sourceTree = "<group>"; };
+		20FD5D2426C394FB007F7188 /* ErrorAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +157,6 @@
 		20BC898B26BE9392009C6990 /* CopiPen */ = {
 			isa = PBXGroup;
 			children = (
-				20FD5D1F26C3944B007F7188 /* Error */,
 				20FD5D1C26C36343007F7188 /* Components */,
 				207CE2D226BEBF9800DF351B /* PasteBoardContent */,
 				207CE2CD26BEB0F300DF351B /* CoreData */,
@@ -198,17 +199,27 @@
 		20FD5D1C26C36343007F7188 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				20FD5D2226C394E1007F7188 /* Error */,
 				2044A86C26C2B84A00BACF99 /* Toast */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		20FD5D1F26C3944B007F7188 /* Error */ = {
+		20FD5D2226C394E1007F7188 /* Error */ = {
 			isa = PBXGroup;
 			children = (
 				20FD5D2026C39452007F7188 /* EquatableError.swift */,
+				20FD5D2326C394E8007F7188 /* Alert */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		20FD5D2326C394E8007F7188 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				20FD5D2426C394FB007F7188 /* ErrorAlertModifier.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				207CE2D926BEC09600DF351B /* PasteboardContentURLComponent.swift in Sources */,
 				20BC899926BE9395009C6990 /* CopiPen.xcdatamodeld in Sources */,
 				207CE2CC26BE9A5B00DF351B /* AppDelegate.swift in Sources */,
+				20FD5D2526C394FB007F7188 /* ErrorAlertModifier.swift in Sources */,
 				20BC898D26BE9392009C6990 /* CopiPenApp.swift in Sources */,
 				2044A86E26C2B85400BACF99 /* ToastModifier.swift in Sources */,
 				20FD5D2126C39452007F7188 /* EquatableError.swift in Sources */,
