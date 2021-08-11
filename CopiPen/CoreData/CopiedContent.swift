@@ -6,10 +6,10 @@ import UniformTypeIdentifiers
 extension CopiedContent {
     struct Item {
         let key: String
-        let preferredKind: ContentKind
+        let preferredKind: Kind
         let allItems: [[String: Any]]
 
-        enum ContentKind {
+        enum Kind {
             case text(String)
             case image(UIImage)
             case url(URL)
