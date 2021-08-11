@@ -5,7 +5,7 @@ struct PasteboardContentListView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \CopiedContent.timestamp, ascending: false)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \CopiedContent.createdDate, ascending: false)],
         animation: .default)
     private var contents: FetchedResults<CopiedContent>
     @State private var shownCopiedToast: Bool = false
@@ -61,20 +61,18 @@ struct PasteboardContentListView: View {
     }
     
     private func addItem() {
-        if let contentType = UIPasteboard.general.mapToContentType() {
-            withAnimation {
-                do {
-                    try CopiedContent.createAndSave(viewContext: viewContext, contentType: contentType)
-                    shownUndoToast = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        shownUndoToast = false
-                    }
-                } catch {
-                    // Replace this implementation with code to handle the error appropriately.
-                    // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    let nsError = error as NSError
-                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        withAnimation {
+            do {
+                try CopiedContent.createAndSave(viewContext: viewContext)
+                shownUndoToast = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    shownUndoToast = false
                 }
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
     }

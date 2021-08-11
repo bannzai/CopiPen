@@ -21,19 +21,22 @@ extension CopiedContent {
         }
     }
     
-    static func createAndSave(viewContext: NSManagedObjectContext, contentType: ContentType) throws {
+    static func createAndSave(viewContext: NSManagedObjectContext) throws {
         let content = CopiedContent(context: viewContext)
         content.id = UUID()
-        content.timestamp = Date()
-        switch contentType {
-        case .text(let text):
-            content.text = text
-        case .image(let image):
-            content.image = image.jpegData(compressionQuality: 1)
-        case .url(let url):
-            content.url = url
+        content.createdDate = Date()
+        content.items = UIPasteboard.general.items
+        if let contentType = UIPasteboard.general.mapToContentType() {
+            switch contentType {
+            case .text(let text):
+                content.text = text
+            case .image(let image):
+                content.image = image.jpegData(compressionQuality: 1)
+            case .url(let url):
+                content.url = url
+            }
         }
-        
+
         try viewContext.save()
     }
     
