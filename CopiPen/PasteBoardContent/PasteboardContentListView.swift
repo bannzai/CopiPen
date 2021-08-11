@@ -37,21 +37,20 @@ struct PasteboardContentListView: View {
                         addItem()
                     }
                 }
-
-                if shownFeedback {
-                    VStack {
-                        Spacer()
-                        Text("コピーしました")
-                            .font(.caption)
-                            .foregroundColor(.white)
-                            .frame(maxWidth: 200)
-                            .padding(.vertical, 12)
-                            .background(Color(.systemGray3))
-                            .cornerRadius(16)
-                    }
-                }
             }
             .navigationTitle("Copied List")
+            .toast(isPresented: $shownFeedback) {
+                VStack {
+                    Spacer()
+                    Text("コピーしました")
+                        .font(.caption)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: 200)
+                        .padding(.vertical, 12)
+                        .background(Color(.systemGray3))
+                        .cornerRadius(16)
+                }
+            }
         }
     }
     

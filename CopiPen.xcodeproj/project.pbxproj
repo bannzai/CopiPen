@@ -90,12 +90,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2044A86C26C2B84A00BACF99 /* Component */ = {
+		2044A86C26C2B84A00BACF99 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
 				2044A86D26C2B85400BACF99 /* Toast.swift */,
 			);
-			path = Component;
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		207CE2CD26BEB0F300DF351B /* CoreData */ = {
@@ -150,7 +150,7 @@
 		20BC898B26BE9392009C6990 /* CopiPen */ = {
 			isa = PBXGroup;
 			children = (
-				2044A86C26C2B84A00BACF99 /* Component */,
+				2044A86C26C2B84A00BACF99 /* Modifiers */,
 				207CE2D226BEBF9800DF351B /* PasteBoardContent */,
 				207CE2CD26BEB0F300DF351B /* CoreData */,
 				20BC898C26BE9392009C6990 /* CopiPenApp.swift */,
